@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réveillon na Juréia 2025/2026 | Portal Oficial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        ocean: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                            950: '#082f49'
+                        },
+                        sand: {
+                            50: '#fdfbf7',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            500: '#d97706',
+                            600: '#b45309',
+                            800: '#92400e'
+                        },
+                        gold: {
+                            500: '#f59e0b',
+                            600: '#d97706'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(8, 47, 73, 0.92) 0%, rgba(3, 105, 161, 0.85) 50%, rgba(217, 119, 6, 0.8) 100%), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-ocean-500 selection:text-white">
+
+    <nav class="sticky top-0 z-50 glass-card shadow-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-ocean-600 to-sand-500 flex items-center justify-center text-white shadow-lg shadow-ocean-500/30">
+                    <i class="fa-solid fa-umbrella-beach text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold bg-gradient-to-r from-ocean-900 to-ocean-600 bg-clip-text text-transparent">Juréia 2026</span>
+                    <p class="text-xs font-medium text-slate-500">29/12 a 03/01 • 20 Pessoas</p>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-600">
+                <a href="#countdown" class="hover:text-ocean-600 transition">Contagem</a>
+                <a href="#mapa" class="hover:text-ocean-600 transition">Mapa de Refeições</a>
+                <a href="#compras" class="hover:text-ocean-600 transition">Lista & Isopor</a>
+                <a href="#checklist" class="hover:text-ocean-600 transition flex items-center gap-1.5"><i class="fa-solid fa-square-check text-ocean-600"></i> Checklist Interativo</a>
+                <a href="#especial" class="hover:text-ocean-600 transition">Notas & Alanys</a>
+            </div>
+
+            <div class="flex items-center">
+                <a href="#checklist" class="bg-ocean-900 hover:bg-ocean-800 text-white px-4 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-ocean-900/20 transition transform active:scale-95 flex items-center gap-2">
+                    <i class="fa-solid fa-cart-shopping"></i> Compras
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-gradient text-white relative min-h-[90vh] flex items-center justify-center px-4 py-20 text-center">
+        <div class="max-w-4xl mx-auto space-y-8 z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sand-200 text-xs sm:text-sm font-bold tracking-wider uppercase shadow-inner">
+                <i class="fa-solid fa-location-dot text-sand-400"></i> Praia da Juréia • Exclusividade & Pé na Areia
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
+                Réveillon Épico <br>
+                <span class="bg-gradient-to-r from-sand-200 via-white to-sand-400 bg-clip-text text-transparent">29/12 a 03/01</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto font-light leading-relaxed">
+                Gastronomia de alto padrão, segurança alimentar total (SG/SL), churrasco de degustação, Luau havaiano, lasanha artesanal de Réveillon e strogonoff duplo para 20 pessoas!
+            </p>
+
+            <!-- Countdown Timer -->
+            <div id="countdown" class="grid grid-cols-4 gap-3 sm:gap-6 max-w-lg mx-auto pt-4">
+                <div class="glass-card !bg-white/10 !border-white/20 p-3 sm:p-4 rounded-2xl text-white">
+                    <span id="days" class="text-2xl sm:text-4xl font-extrabold block">00</span>
+                    <span class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300 font-bold">Dias</span>
+                </div>
+                <div class="glass-card !bg-white/10 !border-white/20 p-3 sm:p-4 rounded-2xl text-white">
+                    <span id="hours" class="text-2xl sm:text-4xl font-extrabold block">00</span>
+                    <span class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300 font-bold">Horas</span>
+                </div>
+                <div class="glass-card !bg-white/10 !border-white/20 p-3 sm:p-4 rounded-2xl text-white">
+                    <span id="minutes" class="text-2xl sm:text-4xl font-extrabold block">00</span>
+                    <span class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300 font-bold">Minutos</span>
+                </div>
+                <div class="glass-card !bg-white/10 !border-white/20 p-3 sm:p-4 rounded-2xl text-white">
+                    <span id="seconds" class="text-2xl sm:text-4xl font-extrabold block">00</span>
+                    <span class="text-[10px] sm:text-xs uppercase tracking-wider text-slate-300 font-bold">Segundos</span>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-wrap justify-center gap-4">
+                <a href="#mapa" class="bg-sand-500 hover:bg-sand-600 text-slate-950 font-bold px-8 py-4 rounded-2xl shadow-xl transition transform hover:-translate-y-0.5 flex items-center gap-3">
+                    <i class="fa-solid fa-utensils"></i> Ver Cardápio & Refeições
+                </a>
+                <a href="#compras" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-bold px-8 py-4 rounded-2xl shadow-lg transition flex items-center gap-3">
+                    <i class="fa-solid fa-clipboard-list"></i> Lista de Compras & Isopor
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="mapa" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-ocean-600 font-bold uppercase tracking-widest text-xs px-3 py-1 bg-ocean-50 rounded-full border border-ocean-100">Gastronomia & Planejamento</span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-3">Mapa de Refeições Oficial</h2>
+            <p class="text-slate-600 mt-4 text-lg">De 29 de dezembro a 03 de janeiro, com pesagem exata, opções sem glúten/lactose garantidas e o capricho em cada prato.</p>
+        </div>
+
+        <!-- Day Tabs -->
+        <div class="flex overflow-x-auto pb-4 gap-2 sm:justify-center mb-10 no-scrollbar">
+            <button onclick="switchDay(29)" id="btn-29" class="day-btn px-5 py-3 rounded-2xl font-bold text-sm transition shadow-sm whitespace-nowrap bg-ocean-900 text-white">29/12 • Chegada & Churrasco</button>
+            <button onclick="switchDay(30)" id="btn-30" class="day-btn px-5 py-3 rounded-2xl font-bold text-sm transition shadow-sm whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">30/12 • Luau Havaiano</button>
+            <button onclick="switchDay(31)" id="btn-31" class="day-btn px-5 py-3 rounded-2xl font-bold text-sm transition shadow-sm whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">31/12 • Réveillon & Lasanha</button>
+            <button onclick="switchDay(1)" id="btn-1" class="day-btn px-5 py-3 rounded-2xl font-bold text-sm transition shadow-sm whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">01/01 • Fricassê (Ressaca)</button>
+            <button onclick="switchDay(2)" id="btn-2" class="day-btn px-5 py-3 rounded-2xl font-bold text-sm transition shadow-sm whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">02/01 • Strogonoff Duplo</button>
+            <button onclick="switchDay(3)" id="btn-3" class="day-btn px-5 py-3 rounded-2xl font-bold text-sm transition shadow-sm whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 border border-slate-200">03/01 • Despedida</button>
+        </div>
+
+        <!-- Schedule Content Panels -->
+        <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden p-6 sm:p-10">
+            
+            <!-- 29/12 -->
+            <div id="panel-29" class="day-panel space-y-8">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-6">
+                    <div>
+                        <span class="text-xs font-bold text-sand-600 uppercase tracking-wider">Terça-feira • 29 de Dezembro</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Chegada às 12:00 & Churrasco de Degustação</h3>
+                    </div>
+                    <div class="w-14 h-14 rounded-2xl bg-amber-50 text-sand-500 flex items-center justify-center text-2xl font-bold shadow-inner">
+                        🥩
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 space-y-3">
+                        <div class="flex items-center gap-2 text-ocean-900 font-bold text-lg">
+                            <i class="fa-solid fa-plate-wheat text-ocean-600">></i> Almoço de Recepção (12:00)
+                        </div>
+                        <ul class="space-y-2 text-slate-600 text-sm">
+                            <li>• <strong>Arroz Branco:</strong> 1,5 kg (cru) soltinho.</li>
+                            <li>• <strong>Frango Grelhado em Tiras:</strong> 2 kg de filé de peito/sassami.</li>
+                            <li>• <strong>Creme de Milho Cremoso:</strong> 1,5 kg de milho + 500ml de leite (opção SL separada).</li>
+                            <li>• <strong>Batata Palha & Salada Crua:</strong> 500g e mix fresco.</li>
+                            <li>• <em>Nota da Cozinha:</em> Já adianta a base da maionese de batata e farofa temperada.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 space-y-3">
+                        <div class="flex items-center gap-2 text-ocean-900 font-bold text-lg">
+                            <i class="fa-solid fa-fire text-sand-500"></i> Jantar: Churrasco de Degustação
+                        </div>
+                        <ul class="space-y-2 text-slate-600 text-sm">
+                            <li>• <strong>Carnes Nobres (Picanha, Alcatra, Fraldinha):</strong> 12 kg fatiadas aos poucos na tábua.</li>
+                            <li>• <strong>Linguiça de Pernil Torta Fina:</strong> 4 kg na brasa.</li>
+                            <li>• <strong>Queijo Coalho & Pão de Alho:</strong> 1,5 kg de queijo e 3 pacotes.</li>
+                            <li>• <strong>Acompanhamentos:</strong> Maionese de batata, farofa e salada de rúcula fresca com tomate e cebola (vinagrete).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 30/12 -->
+            <div id="panel-30" class="day-panel hidden space-y-8">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-6">
+                    <div>
+                        <span class="text-xs font-bold text-sand-600 uppercase tracking-wider">Quarta-feira • 30 de Dezembro</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Dia de Praia & Noite do Luau Havaiano</h3>
+                    </div>
+                    <div class="w-14 h-14 rounded-2xl bg-sky-50 text-ocean-600 flex items-center justify-center text-2xl font-bold shadow-inner">
+                        🌴
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 space-y-3">
+                        <div class="flex items-center gap-2 text-ocean-900 font-bold text-lg">
+                            <i class="fa-solid fa-mug-hot text-ocean-600"></i> Café da Manhã & Tarde
+                        </div>
+                        <p class="text-slate-600 text-sm">Padrão completo (pães Wickbold branco e integral, tapioca, ovos mexidos, mussarela, salame, frutas variadas, sucos e café).</p>
+                        <p class="text-xs text-ocean-700 bg-ocean-50 p-2.5 rounded-xl font-medium">💡 Café da tarde livre com lanchinhos e frutinhas para levar à praia antes do jantar às 20h.</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 space-y-3">
+                        <div class="flex items-center gap-2 text-ocean-900 font-bold text-lg">
+                            <i class="fa-solid fa-bowl-food text-ocean-600"></i> Almoço Reforçado
+                        </div>
+                        <ul class="space-y-1.5 text-slate-600 text-sm">
+                            <li>• Arroz branco (1,5 kg).</li>
+                            <li>• Coxa e sobrecoxa de frango assada (10 kg).</li>
+                            <li>• <strong>Cota Alanys / Especial:</strong> 4 kg de peito de frango assado com batatas na travessa (sem coxa/sobrecoxa).</li>
+                            <li>• Purê de batatas cremoso (com opção SL) e milho.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 space-y-3">
+                        <div class="flex items-center gap-2 text-ocean-900 font-bold text-lg">
+                            <i class="fa-solid fa-music text-sand-500"></i> Jantar / Madrugada (Luau)
+                        </div>
+                        <ul class="space-y-1.5 text-slate-600 text-sm">
+                            <li>• Sanduíches naturais (com sobras do frango assado + pão SG).</li>
+                            <li>• <strong>Potes de Batata Frita McCain</strong> sequinha com potinhos de maionese e ketchup Heinz.</li>
+                            <li>• <strong>Guacamole fresquinha</strong> com Doritos.</li>
+                            <li>• Mesa tropical com fartura de frutas (melão, mamão, uvas, bananas e maçãs).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 31/12 -->
+            <div id="panel-31" class="day-panel hidden space-y-8">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-6">
+                    <div>
+                        <span class="text-xs font-bold text-sand-600 uppercase tracking-wider">Quinta-feira • 31 de Dezembro</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Réveillon: Sua Lasanha Artesanal & Jantar Leve</h3>
+                    </div>
+                    <div class="w-14 h-14 rounded-2xl bg-amber-50 text-sand-500 flex items-center justify-center text-2xl font-bold shadow-inner">
+                        ✨
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 space-y-3">
+                        <div class="flex items-center gap-2 text-ocean-900 font-bold text-lg">
+                            <i class="fa-solid fa-bowl-rice text-ocean-600"></i> Almoço do Dia
+                        </div>
+                        <p class="text-slate-600 text-sm">Macarrão penne à bolonhesa (2,5 kg de massa com opção SG separada) e queijo parmesão ralado à mesa.</p>
+                    </div>
+
+                    <div class="bg-amber-50/50 p-6 rounded-2xl border border-amber-200/60 space-y-3">
+                        <div class="flex items-center gap-2 text-amber-900 font-bold text-lg">
+                            <i class="fa-solid fa-hat-chef text-sand-600"></i> Tarde: Sua Lasanha Exclusiva
+                        </div>
+                        <p class="text-slate-700 text-sm">Você comanda a cozinha! Molho com carne bovina, carne suína, linguiça, bacon, cubos de cenoura, passata e pimentão verde inteiro (retirado depois). Bechamel artesanal com <strong>leite Atilatte</strong>, mussarela e parmesão. Travessas tradicionais e SG/SL lado a lado!</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 space-y-3">
+                        <div class="flex items-center gap-2 text-ocean-900 font-bold text-lg">
+                            <i class="fa-solid fa-glass-cheers text-ocean-600"></i> Jantar da Virada (20:30)
+                        </div>
+                        <p class="text-slate-600 text-sm">Sua lasanha quentinha servida com conforto para a turma jantar antes de descer para a praia ver os fogos com energia máxima.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 01/01 -->
+            <div id="panel-1" class="day-panel hidden space-y-8">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-6">
+                    <div>
+                        <span class="text-xs font-bold text-sand-600 uppercase tracking-wider">Sexta-feira • 01 de Janeiro</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">O Descanso & Fricassê de Ano Novo</h3>
+                    </div>
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl font-bold shadow-inner">
+                        🥂
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 space-y-3">
+                        <div class="flex items-center gap-2 text-ocean-900 font-bold text-lg">
+                            <i class="fa-solid fa-sun text-sand-500"></i> Almoço de Ressaca
+                        </div>
+                        <p class="text-slate-600 text-sm"><strong>Fricassê de Frango Cremoso</strong> feito com 5 kg de peito de frango desfiado, 8 latas de milho, 1,5 kg de creme de leite (com opção SL separada) e batata palha crocante por cima. Arroz branco soltinho.</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 space-y-3">
+                        <div class="flex items-center gap-2 text-ocean-900 font-bold text-lg">
+                            <i class="fa-solid fa-moon text-ocean-600"></i> Jantar Leve
+                        </div>
+                        <p class="text-slate-600 text-sm">O fricassê restante do almoço devidamente aquecido e petiscos de apoio da dispensa para relaxar sem trabalho na cozinha.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 02/01 -->
+            <div id="panel-2" class="day-panel hidden space-y-8">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-6">
+                    <div>
+                        <span class="text-xs font-bold text-sand-600 uppercase tracking-wider">Sábado • 02 de Janeiro</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Sábado Refinado & Strogonoff Duplo</h3>
+                    </div>
+                    <div class="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl font-bold shadow-inner">
+                        👑
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 space-y-3">
+                        <div class="flex items-center gap-2 text-ocean-900 font-bold text-lg">
+                            <i class="fa-solid fa-utensils text-ocean-600"></i> Almoço Refinado
+                        </div>
+                        <p class="text-slate-600 text-sm"><strong>Strogonoff de Frango Artesanal</strong> (estilo Le Cordon Bleu) preparado com creme de leite fresco/zero lactose, cogumelos Paris frescos e um toque de mostarda Dijon. Arroz branco e batata palha artesanal.</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 space-y-3">
+                        <div class="flex items-center gap-2 text-ocean-900 font-bold text-lg">
+                            <i class="fa-solid fa-fire-burner text-sand-500"></i> Jantar: Noite do Strogonoff Duplo
+                        </div>
+                        <p class="text-slate-600 text-sm">Aproveitamento total da sobra do frango do almoço aquecida + **Strogonoff de carne bovina fresco feito por você na hora** (4 kg de patinho em cubos), servidos com o arroz restante e muita batata palha!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 03/01 -->
+            <div id="panel-3" class="day-panel hidden space-y-8">
+                <div class="flex items-center justify-between border-b border-slate-100 pb-6">
+                    <div>
+                        <span class="text-xs font-bold text-sand-600 uppercase tracking-wider">Domingo • 03 de Janeiro</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">A Despedida & Retorno</h3>
+                    </div>
+                    <div class="w-14 h-14 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-2xl font-bold shadow-inner">
+                        🚗
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 space-y-3">
+                    <div class="flex items-center gap-2 text-ocean-900 font-bold text-lg">
+                        <i class="fa-solid fa-house-chimney-user text-ocean-600"></i> Café da Manhã Final (Saída às 11:00)
+                    </div>
+                    <p class="text-slate-600 text-sm">Café da manhã coletivo para zerar o estoque de pães restantes (~4 pacotes), os 30 ovos finais, frios (mussarela e salame) e todas as frutas que restarem na fruteira antes de pegar a estrada de volta para Campinas!</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="compras" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sand-400 font-bold uppercase tracking-widest text-xs px-3 py-1 bg-white/5 rounded-full border border-white/10">Logística & Estratégia</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold mt-3">Lista de Compras & Isopor</h2>
+                <p class="text-slate-400 mt-4 text-lg">Orçamento fechado em R$ 280,00 por pessoa (Total: R$ 5.600,00), com estratégia inteligente para evitar a inflação de fim de ano e divisão exata nos carros.</p>
+            </div>
+
+            <!-- Cooler Distribution Cards -->
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-slate-800/80 p-8 rounded-3xl border border-slate-700 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold text-sand-400 uppercase tracking-wider">Carro 1 • Isopor de 50 Litros</span>
+                        <span class="w-10 h-10 rounded-xl bg-sand-500/20 text-sand-400 flex items-center justify-center font-bold">🧊</span>
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-white">Caixa de Carnes & Açougue</h3>
+                    <p class="text-slate-300 text-sm">Proteínas congeladas e embutidos para o churrasco e as principais refeições da semana.</p>
+                    <ul class="space-y-2 text-sm text-slate-300 pt-2 border-t border-slate-700">
+                        <li>• 12 kg de carnes nobres (Picanha, Alcatra, Fraldinha)</li>
+                        <li>• 8 kg de linguiça de pernil torta fina & 3 kg de queijo coalho</li>
+                        <li>• 16 kg de coxa/sobrecoxa & 15 kg de peito de frango/sassami</li>
+                        <li>• 4 kg patinho em cubos + 6 kg carne moída bolonhesa</li>
+                        <li>• 2 kg carne moída bovina + 1,5 kg carne suína + 800g bacon (Lasanha)</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-800/80 p-8 rounded-3xl border border-slate-700 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-bold text-ocean-400 uppercase tracking-wider">Carro 2 • Isopor de 50 Litros</span>
+                        <span class="w-10 h-10 rounded-xl bg-ocean-500/20 text-ocean-400 flex items-center justify-center font-bold">🥛</span>
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-white">Caixa de Frios & Laticínios SG/SL</h3>
+                    <p class="text-slate-300 text-sm">Laticínios delicados e insumos refrigerados com segurança contra o calor da estrada.</p>
+                    <ul class="space-y-2 text-sm text-slate-300 pt-2 border-t border-slate-700">
+                        <li>• 3 kg de mussarela tradicional + 1 kg de mussarela zero lactose</li>
+                        <li>• 1,5 kg de salame fatiado & 5 potes de requeijão (sendo 1 ZL)</li>
+                        <li>• 3 potes de manteiga puríssima + 1 margarina vegetal/Ghee</li>
+                        <li>• 4 litros de leite Atilatte (bechamel) + 4 litros de leite zero lactose</li>
+                        <li>• 6 caixas de creme de leite zero lactose + 6 caixas de creme fresco</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="checklist" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-ocean-600 font-bold uppercase tracking-widest text-xs px-3 py-1 bg-ocean-50 rounded-full border border-ocean-100">Ferramenta Interativa</span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-3">Checklist de Compras & Cronograma</h2>
+            <p class="text-slate-600 mt-4 text-lg">Marque os itens já comprados na pré-temporada (Set/Out) ou separados para a compra de última hora (Domingo/Segunda).</p>
+        </div>
+
+        <div class="flex justify-center gap-4 mb-8">
+            <button onclick="filterChecklist('all')" id="filter-all" class="px-5 py-2.5 rounded-xl font-bold text-sm bg-ocean-900 text-white shadow">Todos os Itens</button>
+            <button onclick="filterChecklist('early')" id="filter-early" class="px-5 py-2.5 rounded-xl font-bold text-sm bg-white text-slate-700 border border-slate-200 hover:bg-slate-100">Comprar Set/Out (Secos)</button>
+            <button onclick="filterChecklist('late')" id="filter-late" class="px-5 py-2.5 rounded-xl font-bold text-sm bg-white text-slate-700 border border-slate-200 hover:bg-slate-100">Comprar na Semana/Dia</button>
+        </div>
+
+        <div class="bg-white rounded-3xl shadow-xl border border-slate-100 p-6 sm:p-10">
+            <div id="checklist-container" class="space-y-4">
+                <!-- Javascript will populate items here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="especial" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sand-600 font-bold uppercase tracking-widest text-xs px-3 py-1 bg-sand-50 rounded-full border border-sand-200">Atenção Especial</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-3">Notas de Cozinha & Alanys</h2>
+                <p class="text-slate-600 mt-4 text-lg">Detalhes cruciais para garantir conforto absoluto e inclusão alimentar para todos os convidados.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-md border border-slate-200/60 space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xl">
+                        👩‍🍳
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900">Ajuste da Alanys (Luau)</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Como a Alanys não consome coxa nem sobrecoxa, no almoço do dia 30 a cozinheira fará uma assadeira dedicada com <strong>peito de frango assado e batatas</strong>. As sobras desse peito garantem os sanduíches naturais dela à noite no Luau!</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-md border border-slate-200/60 space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xl">
+                        🛡️
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900">Segurança SG / SL</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Garantia de panelas, travessas e utensílios separados. O purê de batatas, o strogonoff separado, o bechamel da lasanha e a mussarela levam insumos 100% livres de glúten e lactose (com leite Atilatte e creme de leite zero lactose).</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-md border border-slate-200/60 space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center font-bold text-xl">
+                        📦
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900">Formas & Praticidade</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Uso de <strong>formas descartáveis de alumínio</strong> para assados, lasanhas e rebuçados, facilitando a limpeza da cozinha da praia e garantindo agilidade no aquecimento das travessas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex items-center justify-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-ocean-600 flex items-center justify-center text-white font-bold">
+                    <i class="fa-solid fa-umbrella-beach text-sm"></i>
+                </div>
+                <span class="text-lg font-extrabold">Réveillon Juréia 2026</span>
+            </div>
+            <p class="text-slate-400 text-sm">Planejamento gastronômico oficial para 20 pessoas • De 29 de dezembro a 03 de janeiro.</p>
+            <p class="text-xs text-slate-500">Bom descanso, excelente Réveillon e ótimo apetite para todos! 🌴✨</p>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer Logic
+        const targetDate = new Date('December 29, 2026 12:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById('days').innerText = String(days).padStart(2, '0');
+                document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+                document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Day Tab Switcher
+        function switchDay(day) {
+            document.querySelectorAll('.day-panel').forEach(panel => panel.classList.add('hidden'));
+            document.querySelectorAll('.day-btn').forEach(btn => {
+                btn.classList.remove('bg-ocean-900', 'text-white');
+                btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+            });
+
+            document.getElementById(`panel-${day}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`btn-${day}`);
+            activeBtn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+            activeBtn.classList.add('bg-ocean-900', 'text-white');
+        }
+
+        // Interactive Checklist Data
+        const shoppingItems = [
+            { id: 1, name: "Picanha / Alcatra / Fraldinha (12 kg)", category: "late", type: "Carnes" },
+            { id: 2, name: "Coxa com Sobrecoxa de Frango (16 kg)", category: "late", type: "Carnes" },
+            { id: 3, name: "Peito de Frango / Sassami (15 kg)", category: "late", type: "Carnes" },
+            { id: 4, name: "Carne Bovina em Cubos / Patinho (4 kg)", category: "late", type: "Carnes" },
+            { id: 5, name: "Linguiça de Pernil Torta Fina (8 kg)", category: "late", type: "Carnes" },
+            { id: 6, name: "Carne Moída Patinho/Acém (6 kg - Bolonhesa)", category: "late", type: "Carnes" },
+            { id: 7, name: "Carne Moída Bovina (2 kg - Lasanha)", category: "late", type: "Carnes" },
+            { id: 8, name: "Carne Suína Moída ou Picada (1,5 kg - Lasanha)", category: "late", type: "Carnes" },
+            { id: 9, name: "Bacon em Peça / Fatias Grossas (800g)", category: "late", type: "Carnes" },
+            { id: 10, name: "Queijo Coalho / Provolone (3 kg)", category: "late", type: "Frios" },
+            { id: 11, name: "Queijo Mussarela Tradicional (Peça de 3 kg)", category: "late", type: "Frios" },
+            { id: 12, name: "Queijo Mussarela Zero Lactose (1 kg)", category: "late", type: "Frios" },
+            { id: 13, name: "Salame Fatiado (1,5 kg)", category: "late", type: "Frios" },
+            { id: 14, name: "Requeijão Cremoso (4 potes de 500g)", category: "late", type: "Frios" },
+            { id: 15, name: "Requeijão Cremoso Zero Lactose (1 pote)", category: "late", type: "Frios" },
+            { id: 16, name: "Manteiga Puríssima (3 potes de 500g)", category: "late", type: "Frios" },
+            { id: 17, name: "Leite Longa Vida Tradicional (20 litros)", category: "early", type: "Secos" },
+            { id: 18, name: "Leite Longa Vida Zero Lactose (4 litros)", category: "late", type: "Frios" },
+            { id: 19, name: "Leite Atilatte (4 litros - Bechamel)", category: "late", type: "Frios" },
+            { id: 20, name: "Creme de Leite Fresco / Tradicional (6 un)", category: "late", type: "Frios" },
+            { id: 21, name: "Creme de Leite caixinha (caixa c/ 27 un)", category: "early", type: "Secos" },
+            { id: 22, name: "Creme de Leite Zero Lactose (6 caixinhas)", category: "early", type: "Secos" },
+            { id: 23, name: "Leite Condensado (8 caixas)", category: "early", type: "Secos" },
+            { id: 24, name: "Pães de Forma (Branco, Integral, SG) & Pão de Alho", category: "late", type: "Padaria" },
+            { id: 25, name: "Arroz Branco (8 kg)", category: "early", type: "Secos" },
+            { id: 26, name: "Macarrão Penne Grano Duro (5 kg) & SG (2 kg)", category: "early", type: "Secos" },
+            { id: 27, name: "Massa de Lasanha Tradicional & SG", category: "early", type: "Secos" },
+            { id: 28, name: "Passata Italiana (6 garrafas) & Molho Sachê", category: "early", type: "Secos" },
+            { id: 29, name: "Farinha, Fubá, Tapioca, Açúcar, Óleo e Azeite", category: "early", type: "Secos" },
+            { id: 30, name: "Batata Palha Artesanal (5 pkts) & Milho (15 latas)", category: "early", type: "Secos" },
+            { id: 31, name: "Cogumelos Paris Frescos (4 bandejas)", category: "late", type: "Hortifrúti" },
+            { id: 32, name: "Café Especial (4 pkts) & Filtros 103", category: "early", type: "Secos" },
+            { id: 33, name: "Batata Frita McCain Gourmet 2kg (4 pkts)", category: "late", type: "Congelados" },
+            { id: 34, name: "Sucos de Uva e Laranja", category: "early", type: "Bebidas" },
+            { id: 35, name: "Hortifrúti Completo (Batatas 35kg, Cebolas, Tomates, Ovos 150un, Frutas)", category: "late", type: "Hortifrúti" },
+            { id: 36, name: "Papel Higiênico, Sacos de Lixo 100L e Formas Descartáveis", category: "early", type: "Limpeza" }
+        ];
+
+        let currentFilter = 'all';
+
+        function renderChecklist() {
+            const container = document.getElementById('checklist-container');
+            container.innerHTML = '';
+
+            const filtered = shoppingItems.filter(item => {
+                if (currentFilter === 'early') return item.category === 'early';
+                if (currentFilter === 'late') return item.category === 'late';
+                return true;
+            });
+
+            filtered.forEach(item => {
+                const isChecked = localStorage.getItem(`item-${item.id}`) === 'true';
+                const div = document.createElement('div');
+                div.className = `flex items-center justify-between p-4 rounded-2xl border transition ${isChecked ? 'bg-slate-50 border-slate-200 opacity-60 line-through' : 'bg-white border-slate-200/80 shadow-sm hover:border-ocean-300'}`;
+                
+                div.innerHTML = `
+                    <div class="flex items-center gap-3 cursor-pointer flex-1" onclick="toggleItem(${item.id})">
+                        <input type="checkbox" ${isChecked ? 'checked' : ''} class="w-5 h-5 rounded-lg text-ocean-600 focus:ring-ocean-500 border-slate-300 cursor-pointer">
+                        <span class="font-medium text-slate-800 text-sm sm:text-base">${item.name}</span>
+                    </div>
+                    <span class="text-xs font-bold px-3 py-1 rounded-full ${item.category === 'early' ? 'bg-amber-50 text-amber-700 border border-amber-200' : 'bg-ocean-50 text-ocean-700 border border-ocean-200'}">
+                        ${item.category === 'early' ? 'Comprar Set/Oct' : 'Comprar na Semana'}
+                    </span>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function toggleItem(id) {
+            const currentState = localStorage.getItem(`item-${id}`) === 'true';
+            localStorage.setItem(`item-${id}`, !currentState);
+            renderChecklist();
+        }
+
+        function filterChecklist(filter) {
+            currentFilter = filter;
+            document.querySelectorAll('#filter-all, #filter-early, #filter-late').forEach(btn => {
+                btn.className = "px-5 py-2.5 rounded-xl font-bold text-sm bg-white text-slate-700 border border-slate-200 hover:bg-slate-100";
+            });
+            const active = document.getElementById(`filter-${filter}`);
+            active.className = "px-5 py-2.5 rounded-xl font-bold text-sm bg-ocean-900 text-white shadow";
+            renderChecklist();
+        }
+
+        // Initial render
+        renderChecklist();
+    </script>
+</body>
+</html>
