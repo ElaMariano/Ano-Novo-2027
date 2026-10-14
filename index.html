@@ -66,6 +66,7 @@
                 <a href="#valores" class="hover:text-oceanDeep transition">Valores</a>
                 <a href="#mercados" class="hover:text-oceanDeep transition">Mercados</a>
                 <a href="#simulador" class="hover:text-oceanDeep transition">Simulador Carro</a>
+                <a href="#albuns" class="hover:text-oceanDeep transition">Álbuns 📸</a>
                 <a href="#cardapio" class="hover:text-oceanDeep transition">Cardápio Oficial</a>
             </div>
 
@@ -100,14 +101,12 @@
                 <!-- Column 1: Mini Calendar Widget -->
                 <div class="bg-white/15 backdrop-blur-md p-5 rounded-3xl border border-white/25 shadow-xl flex flex-col justify-between">
                     <div class="flex items-center justify-between mb-3">
-                        <span class="text-xs uppercase font-extrabold tracking-wider text-yellow-200">Dez 2026 / Jan 2027 </span>
+                        <span id="calendar-title" class="text-xs uppercase font-extrabold tracking-wider text-yellow-200">Dezembro 2026</span>
                         <div class="flex gap-1">
                             <button onclick="changeMonth(-1)" class="w-6 h-6 rounded-full bg-white/20 text-white flex items-center justify-center text-xs hover:bg-white/45 transition"><i class="fa-solid fa-chevron-left"></i></button>
                             <button onclick="changeMonth(1)" class="w-6 h-6 rounded-full bg-white/20 text-white flex items-center justify-center text-xs hover:bg-white/45 transition"><i class="fa-solid fa-chevron-right"></i></button>
                         </div>
                     </div>
-                    
-                    <div id="calendar-title" class="text-center font-bold text-sm text-yellow-300 mb-2">Dezembro 2026</div>
 
                     <!-- Days Header -->
                     <div class="grid grid-cols-7 gap-1 text-center text-[10px] font-bold text-cyan-100 mb-1">
@@ -119,7 +118,7 @@
                         <!-- Populated by JS -->
                     </div>
 
-                    <div class="mt-3 pt-2 border-t border-white/2flex items-center justify-between text-[11px] text-cyan-100 flex">
+                    <div class="mt-3 pt-2 border-t border-white/20 flex items-center justify-between text-[11px] text-cyan-100">
                         <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-yellow-400 inline-block"></span> Dias de Viagem</span>
                         <span class="text-right font-bold">29/12 a 03/01</span>
                     </div>
@@ -208,11 +207,11 @@
                     </div>
                     <div class="flex items-start gap-3">
                         <i class="fa-solid fa-user-tie text-emerald-600 mt-1"></i>
-                        <p><strong> Incluso no valor:</strong> Cozinheira para o café da manhã e almoço + faxineira para a limpeza diária da casa!</p>
+                        <p><strong>⚠️ Incluso no valor:</strong> Cozinheira para o café da manhã e almoço + faxineira para a limpeza diária da casa!</p>
                     </div>
                     <div class="flex items-start gap-3">
                         <i class="fa-solid fa-briefcase text-oceanTurquoise mt-1"></i>
-                        <p><strong> Plus do Home Office:</strong> Como é na beira da praia, quem estiver trabalhando consegue aproveitar o mar no horário de almoço e pisar na areia no pós-expediente.</p>
+                        <p><strong>🌟 Plus do Home Office:</strong> Como é na beira da praia, quem estiver trabalhando consegue aproveitar o mar no horário de almoço e pisar na areia no pós-expediente.</p>
                     </div>
                 </div>
 
@@ -378,6 +377,74 @@
                 </div>
 
                 <p class="text-[11px] text-slate-400 italic">Dica: Combine caronas com o grupo para otimizar os custos e garantir muita animação no trajeto!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo & Video Albums Section -->
+    <section id="albuns" class="py-16 bg-gradient-to-b from-white to-[#F0F9FF] border-y border-cyan-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-oceanDeep font-extrabold uppercase tracking-widest text-xs px-4 py-1.5 bg-cyan-100 rounded-full">Memórias & Registros</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Álbuns Oficiais do Grupo 📸</h2>
+                <p class="text-slate-600 text-sm mt-2">Guarde e compartilhe todos os momentos épicos da nossa viagem. Suba suas fotos e vídeos nos álbuns abaixo!</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Album 1: General Photos -->
+                <div class="bg-white rounded-3xl p-8 border border-cyan-100 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl transition transform hover:-translate-y-1">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-cyan-100 text-oceanDeep flex items-center justify-center text-2xl font-bold shadow-inner">
+                            <i class="fa-solid fa-images"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-slate-900">Álbum de Fotos Geral</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            O espaço colaborativo para todo mundo subir as fotos da resenha, da praia, da casa e da virada!
+                        </p>
+                    </div>
+                    <div>
+                        <a href="https://photos.app.goo.gl/Fp7q8mFyYYRAQa8c8" target="_blank" class="w-full bg-gradient-to-r from-oceanTurquoise to-oceanDeep text-white py-3 px-6 rounded-2xl font-bold text-sm shadow-md hover:opacity-90 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cloud-arrow-up"></i> Acessar Álbum de Fotos
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Album 2: Videos -->
+                <div class="bg-white rounded-3xl p-8 border border-cyan-100 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl transition transform hover:-translate-y-1">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl font-bold shadow-inner">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-slate-900">Álbum de Vídeos</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Os melhores momentos em vídeo!
+                        </p>
+                    </div>
+                    <div>
+                        <a href="https://photos.app.goo.gl/47x48Y1RKQXHQg8G8" target="_blank" class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white py-3 px-6 rounded-2xl font-bold text-sm shadow-md hover:opacity-90 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-clapperboard"></i> Acessar Álbum de Vídeos
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Album 3: Professional Camera -->
+                <div class="bg-white rounded-3xl p-8 border border-amber-100 shadow-xl flex flex-col justify-between space-y-6 hover:shadow-2xl transition transform hover:-translate-y-1 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-yellow-400 text-slate-900 text-[10px] font-extrabold px-3 py-1 rounded-bl-xl uppercase tracking-wider">Profissional</div>
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl font-bold shadow-inner">
+                            <i class="fa-solid fa-camera-retro"></i>
+                        </div>
+                        <h3 class="text-xl font-extrabold text-slate-900">Fotos da Câmera</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Registros oficiais capturados com a minha câmera.
+                        </p>
+                    </div>
+                    <div>
+                        <a href="https://photos.app.goo.gl/koJRe2ADsexxkR6K7" target="_blank" class="w-full bg-gradient-to-r from-amber-500 to-orange-500 text-white py-3 px-6 rounded-2xl font-bold text-sm shadow-md hover:opacity-90 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-camera"></i> Ver Fotos da Câmera
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -560,7 +627,7 @@
                 <div class="flex items-center justify-between border-b border-slate-100 pb-6">
                     <div>
                         <span class="text-xs font-bold text-oceanDeep uppercase tracking-wider">Sábado • 02 de Janeiro</span>
-                        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">SábadoStrogonoff Duplo</h3>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Sábado Strogonoff Duplo</h3>
                     </div>
                     <div class="w-14 h-14 rounded-2xl bg-cyan-100 text-oceanDeep flex items-center justify-center text-2xl font-bold border border-cyan-200">
                         👑
